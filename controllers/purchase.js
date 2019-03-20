@@ -125,6 +125,10 @@ class PurchaseController {
               message: 'userId and product_name to be deleted fields must be included'
             })
           }
+          const param = {
+              userId,
+              product_name
+          }
     }
 }
 
