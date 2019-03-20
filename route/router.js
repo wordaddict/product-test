@@ -18,6 +18,7 @@ router.get('/', (req, res) => {
 router.post('/purchases', (req, res) => new PurchaseController().logPurchaseReceipts(req, res));
 router.get('/sales-per-month', (req, res) => new PurchaseController().salesPerMonth(req, res));
 router.get('/products', (req, res) => new PurchaseController().getAllProducts(req, res));
-router.put('/update-products', (req, res) => new PurchaseController().addToProducts(req, res))
+router.put('/update-products', (req, res) => new PurchaseController().addToProducts(req, res));
+router.delete('/delete-products', (req, res) => new PurchaseController().deleteProduct(req, res));
 
 module.exports = router;

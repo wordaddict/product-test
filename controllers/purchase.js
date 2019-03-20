@@ -115,7 +115,16 @@ class PurchaseController {
                     message: 'Something went wrong',
                 });
             })
+    }
 
+    deleteProduct(req, res) {
+        const { userId, product_name } = req.body;
+        if (!userId || !product_name) {
+            return res.status(400).send({
+              error: true,
+              message: 'userId and product_name to be deleted fields must be included'
+            })
+          }
     }
 }
 
