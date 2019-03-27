@@ -25,6 +25,10 @@ class PurchaseServices {
     addToProducts(param, dataParam){
         return PurchaseModel.findOneAndUpdate(param, { $set: dataParam }, { new: true })
     }
+
+    deleteProduct(param) {
+
+    }
 }
 
 module.exports = PurchaseServices;
